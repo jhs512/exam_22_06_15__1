@@ -94,38 +94,5 @@ public class AppTest {
     public void _4항_연산_3() {
         assertEquals(0, new Calc().run("3 * 1 + (1 - (4 * 1 - (1 - 1)))"));
     }
-
-    @Test
-    public void Util__Str__countMatches() {
-        int count = Util.Str.countMatches(" 3 + 3 + 3", new String[]{" + ", " - ", " * ", " / "});
-
-        assertEquals(2, count);
-    }
-
-    @Test
-    public void Util__Str__countMatches__2() {
-        int count = Util.Str.countMatches(" 3 * (3 / 3)", new String[]{" + ", " - ", " * ", " / ", "("});
-
-        assertEquals(3, count);
-    }
-
-    @Test
-    public void Polynomial__getSplitInfo() {
-        assertEquals("3", new Polynomial("3 + 3").getFirstTermStr());
-    }
-
-    @Test
-    public void Polynomial__getSplitInfo_2() {
-        assertEquals("3", new Polynomial("3 + 3").getRestTermsStr());
-    }
-
-    @Test
-    public void Polynomial__getSplitInfo_3() {
-        assertEquals("3 * 3", new Polynomial("3 * 3 + 3").getFirstTermStr());
-    }
-
-    @Test
-    public void Polynomial__getSplitInfo_4() {
-        assertEquals("(3 + 3)", new Polynomial("(3 + 3) + 3").getFirstTermStr());
-    }
 }
+
